@@ -5,7 +5,7 @@ class AddressResponse {
     var address: Address? = null
     var error: Throwable? = null
 
-    constructor(address: Address) {
+    constructor(address: Address?) {
         this.address = address
     }
 

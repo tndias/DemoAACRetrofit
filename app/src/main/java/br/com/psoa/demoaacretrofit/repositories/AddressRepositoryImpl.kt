@@ -34,7 +34,7 @@ class AddressRepositoryImpl : AddressRepository {
         addressAPI.search(cep)
                 .enqueue(object : Callback<Address> {
                     override fun onResponse(call: Call<Address>?, response: Response<Address>?) {
-                        liveData.value = AddressResponse(response?.body()!!)
+                        liveData.value = AddressResponse(response?.body())
                     }
 
                     override fun onFailure(call: Call<Address>?, t: Throwable?) {
